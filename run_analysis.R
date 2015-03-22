@@ -51,3 +51,4 @@
         library(dplyr)
         groups <- group_by(FinalData,subject,activity,variable)
         sumData <- summarize(groups,avg=mean(value))
+        write.table(sumData,"./tidydata.txt",row.name=FALSE)
